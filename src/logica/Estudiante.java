@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class Estudiante implements Serializable {
+	// declaro los atributos privados:
 	private String nombre;
 	private String apellido;
 	private String codigo;
@@ -12,6 +13,7 @@ public class Estudiante implements Serializable {
 	private double nota3;
 	private double notaDefinitiva;
 
+	// genero el constructor:
 	public Estudiante(String nombre, String apellido, String codigo, double nota1, double nota2, double nota3) {
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -20,11 +22,12 @@ public class Estudiante implements Serializable {
 		this.nota2 = nota2;
 		this.nota3 = nota3;
 	}
-	
-	public  void calcularNotaDefinitiva() {
+
+	public void calcularNotaDefinitiva() {
 		notaDefinitiva = (nota1 * 0.35) + (nota2 * 0.35) + (nota3 * 0.3);
 	}
 
+	// genero los getters y setters:
 	public String getNombre() {
 		return nombre;
 	}
@@ -80,6 +83,5 @@ public class Estudiante implements Serializable {
 	public void setNotaDefinitiva(double notaDefinitiva) {
 		this.notaDefinitiva = notaDefinitiva;
 	}
-	
 
 }
